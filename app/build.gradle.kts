@@ -15,6 +15,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         // Configurar la variable de entorno desde .env
         val envFile = rootProject.file(".env")
         val githubToken = if (envFile.exists()) {
@@ -26,7 +27,6 @@ android {
         } else {
             ""
         }
-
         buildConfigField("String", "GITHUB_API_TOKEN", "\"$githubToken\"")
     }
 
@@ -41,9 +41,10 @@ android {
     }
 
     buildFeatures {
-        viewBinding=true
-        buildConfig= true
+        viewBinding = true
+        buildConfig = true
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -63,6 +64,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
     // Retrofit para networking
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 // Convertidor Gson para serializar/deserializar JSON
