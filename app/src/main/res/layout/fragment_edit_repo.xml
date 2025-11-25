@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F8F9FA">
+
+    <!-- Espaciado superior -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <!-- Campo Nombre del repositorio (NO EDITABLE) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Nombre del repositorio (no editable)"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxStrokeColor="#CCCCCC"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:hintTextColor="#999999">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_edit_repo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:enabled="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo Detalles del repositorio -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:hint="Detalles del repositorio"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxStrokeColor="#E0E0E0"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:hintTextColor="#666666">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_edit_repo_description"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:gravity="top"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btn_save_changes"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"
+        android:text="Guardar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#6366F1"
+        app:cornerRadius="28dp"
+        android:elevation="0dp" />
+
+    <!-- Espaciado inferior -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
